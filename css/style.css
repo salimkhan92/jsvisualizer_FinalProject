@@ -1,0 +1,363 @@
+@font-face {
+		font-family: 'HighlandGothicLightFLFRegular';
+		src: url('fonts/HighlandGothicLightFLF-webfont.eot');
+		src: local('☺'), url('fonts/HighlandGothicLightFLF-webfont.woff') format('woff'), url('fonts/HighlandGothicLightFLF-webfont.ttf') format('truetype'), url('fonts/HighlandGothicLightFLF-webfont.svg#webfont') format('svg');
+}
+	
+body, html{
+  margin : 0;
+  padding : 0;
+ 
+}
+
+#canvas{
+  background-color:  white;
+}
+
+
+/*-------------- nav ---------------*/
+	nav#global1 { 
+	   width:45%;
+	   position:absolute; 
+	    left: 12%;
+	    top: 2px;
+	   height:50px; 
+	   -webkit-border-radius:10px;  
+	   margin-left:150px;
+	   border-radius: 20px; 
+	   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #7A7A7A),color-stop(1, #9BC9C7)); 
+	    
+	   }
+    nav#global1 ul { 
+		text-align: center;
+		height: 40px;
+		margin: 0 auto;
+		display: table; 
+	}
+	nav#global1 ul li { position: relative; display: inline; width:150px; }
+    nav#global1 ul li a { 
+		font-size: 22px;
+		display: block;
+		float: left;
+		text-transform: uppercase;
+		line-height: 40px;
+		padding: 0 25px;
+		color: #fff;
+		font: 18px/36px Colaborate-RegularRegular, "Trebuchet MS", Arial, Helvetica, sans-serif; 
+	}
+	nav#global1 ul li:hover {
+		border: none;
+		-moz-box-shadow: inset 0 0 15px #696666;
+		background-color:transparent;
+		background-image: -moz-linear-gradient(bottom, #ABABAB, #999999);
+		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #ABABAB),color-stop(1, #999999));
+		border-top-left-radius: 15px;
+		-moz-border-radius-topleft: 15px;
+		-webkit-border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		-moz-border-radius-topright: 15px;
+		-webkit-border-top-right-radius: 15px;
+		border-bottom-left-radius: 15px;
+		-moz-border-radius-bottomleft: 15px;
+		-webkit-border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		-moz-border-radius-bottomright: 15px;
+		-webkit-border-bottom-right-radius: 15px;
+		z-index:5000;//show upon the node
+	}
+	
+	
+	/*----submenu------*/
+	nav#global1 ul li #subMenu {
+		position: absolute;
+		top: 35px;
+		left: -370px;
+		-moz-transform: translate(0, 11px);
+		-webkit-transform: translate(232px, 0);
+		background: #999999; 
+		box-shadow: 0 0 10px #444444, inset 0 0 15px #696666, inset 0 35px 35px -18px #ABABAB;
+		height: 0;
+		z-index: -1;
+		border-radius: 15px;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+		box-shadow: 0 0 10px #444444, inset 0 0 15px #696666, inset 0 35px 35px -18px #ABABAB;	
+		-moz-box-shadow: 0 0 10px #444444, inset 0 0 15px #696666;
+		-webkit-box-shadow: 0 0 10px #444444;
+		background-image: -moz-linear-gradient(top, #ABABAB, #999999);
+		background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ABABAB),color-stop(1, #999999)); 
+		
+	} 
+	
+	nav#global1 ul li #subMenu li {
+		background: #999999;
+		display: block;
+		text-align: center;
+	}
+	nav#global1 ul li #subMenu li a {
+	background: #999999;
+		height: 0;
+		line-height: 0;
+		width: 100px;
+	} 
+	/* submenu shape */
+	#subMenu li:first-child a {
+		border-top-left-radius: 15px;
+		-moz-border-radius-topleft: 15px;
+		-webkit-border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		-moz-border-radius-topright: 15px;
+		-webkit-border-top-right-radius: 15px;
+	}
+	#subMenu li:last-child a {
+		border-bottom-left-radius: 15px;
+		-moz-border-radius-bottomleft: 15px;
+		-webkit-border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		-moz-border-radius-bottomright: 15px;
+		-webkit-border-bottom-right-radius: 15px;
+	} 
+	#services a {
+		transition: all 0.3s linear;
+		-o-transition: all 0.3s linear;
+		-moz-transition: all 0.3s linear;
+		-webkit-transition: all 0.3s linear;
+	}
+	#services:hover > #subMenu { z-index: 5000; }
+	#services:hover > #subMenu li a { height: 40px; line-height: 40px; width:200px }
+
+
+/*---------  multi-upload ------*/
+#newFeature{
+  position : absolute;
+  top: 10px;
+  left: 980px;
+  width: 930px;
+  float : left;
+  font:12px/32px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color:#fff;
+   display:none;
+}
+#saveForm{
+  position : absolute;
+  top: 45px;
+  left: 940px;
+ 
+  font:12px/32px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border: none; 
+  display:none;
+}
+
+#submitBttn{
+	  
+}
+#nameForm{
+	font:12px/32px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	 border: 1px solid #6e7e93;
+	 padding: 0px 4px 13px 0px;
+	 margin: 0px 0px 0px 8px;
+	 height: 20px;
+	 border: none;
+}
+
+
+ 
+
+form{
+  padding :0;
+  margin : 0;	
+}
+input{
+  border : 1px solid gray;
+  color : gray;
+  padding : 4px;
+  box-shadow: 0 0 10px #629996;
+  -moz-box-shadow: 0 0 10px #629996;
+  -webkit-box-shadow: 0 0 10px #629996;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+/* related to NodeGraph & li/ul */
+ul{
+  padding : 0;
+  margin : 0;
+}
+
+li{
+  list-style : none; 
+}
+
+li, .file {
+  margin: 0;
+  cursor : pointer;
+  background-color:white;
+  font:12px/32px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border-bottom : 1px solid #cccccc;
+  padding : 5px 10px 5px 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+li, .file:hover{
+	font:14px/34px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #fff;
+	box-shadow: inset 0 -35px 35px -18px #9BC9C7, inset 3px 0 12px #7A7A7A;
+	background-image: -moz-linear-gradient(top, #7A7A7A, #9BC9C7);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #7A7A7A),color-stop(1, #9BC9C7));
+}
+
+textarea, input{ 
+  outline:none;
+}
+
+ 		
+.button{
+	color:#000;	
+	border: 1px solid #6e7e93;
+	background-color:transparent;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	z-index: 1;
+	box-shadow: 0 0 10px #629996;
+	-moz-box-shadow: 0 0 10px #629996;
+	-webkit-box-shadow: 0 0 10px #629996;
+	font:12px/14px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	
+}
+
+.button:hover {
+	border: none;
+	font:14px/14px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #fff;
+	box-shadow: inset 0 -35px 35px -18px #9BC9C7, inset 3px 0 12px #7A7A7A;
+	background-image: -moz-linear-gradient(top, #7A7A7A, #9BC9C7);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #7A7A7A),color-stop(1, #9BC9C7));
+}
+
+#overlay{
+  position: absolute;
+  background : url("../images/trans.gif");
+  z-index : 1000;
+  cursor: pointer;
+}
+
+/*-----------project list ----------------*/
+#openWin{
+  position : absolute;
+  top : 60px;
+  left : 20px;
+  width : 250px;
+  height : 510px;
+  background-color: #eFeFeF;
+  z-index : 5000;
+  display : none;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border: 1px solid #6e7e93; 
+  box-shadow: 0 0 30px #629996;
+  -moz-box-shadow: 0 0 30px #629996;
+  -webkit-box-shadow: 0 0 30px #629996;
+}
+#files{
+  position : relative;
+  margin : 10px;
+  color:#000;	
+  background-color:white;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 10px #629996;
+  -moz-box-shadow: 0 0 10px #629996;
+  -webkit-box-shadow: 0 0 10px #629996; 
+}
+#fileTitle{
+  font:14px/32px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-left : 10px;
+  margin-top : 10px;
+}
+
+ 
+/*--------------Source code View --------------*/
+/*-------files list --------*/
+ #codes{
+  position : relative;
+  margin : 10px;
+  color:#000;	
+  background-color:white;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+   
+  box-shadow: 0 0 10px #629996;
+  -moz-box-shadow: 0 0 10px #629996;
+  -webkit-box-shadow: 0 0 10px #629996; 
+}
+ 
+#codeTitle{
+  font:14px/32px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-left : 10px;
+  margin-top : 30px;
+}
+/*
+li, .file {
+  margin: 0;
+  cursor : pointer;
+  background-color:white;
+  font:12px/32px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border-bottom : 1px solid #cccccc;
+  padding : 5px 10px 5px 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+li, .file:hover{
+	font:14px/34px HighlandGothicLightFLFRegular, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #fff;
+	box-shadow: inset 0 -35px 35px -18px #9BC9C7, inset 3px 0 12px #7A7A7A;
+	background-image: -moz-linear-gradient(top, #7A7A7A, #9BC9C7);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #7A7A7A),color-stop(1, #9BC9C7));
+}  */
+
+/*--------source code ------------*/
+#scViewDiv{ 
+	position:absolute;
+	top:23px;
+	left:100px;
+	height:600px;
+	width:72%;
+	background-color: #eFeFeF; 
+	 border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border: 1px solid #6e7e93; 
+  box-shadow: 0 0 30px #629996;
+  -moz-box-shadow: 0 0 30px #629996;
+  -webkit-box-shadow: 0 0 30px #629996;
+	margin-left:180px;
+	margin-top:30px; 
+	overflow:auto;
+	z-index:0;
+	display:none;
+}
+.draggable {  
+	margin:5px;
+	padding: 0.5em; 
+	border: 1px solid #9BC9C7;
+	float:left;
+	cursor: move;
+	background-color:white;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+   
+  box-shadow: 0 0 10px #629996;
+  -moz-box-shadow: 0 0 10px #629996;
+  -webkit-box-shadow: 0 0 10px #629996; 
+  }
+
